@@ -19,10 +19,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devtool: 'inline-source-map',
+    devServer:{
+        contentBase: './dist'
+    },
     plugins: [
-        // new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: '插件测试',
+            // title: '插件测试',
             template:"./src/index.html"
         })
     ],
